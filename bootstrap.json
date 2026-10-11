@@ -1,0 +1,29 @@
+{
+  "v": 1,
+  "seq": 1,
+  "issuedAt": 1791696209251,
+  "api": [
+    "https://torric-api.ssahillppatell.workers.dev"
+  ],
+  "trackers": [
+    "wss://torric-tracker.ssahillppatell.workers.dev"
+  ],
+  "publicTrackers": [
+    "wss://tracker.openwebtorrent.com",
+    "wss://tracker.webtorrent.dev"
+  ],
+  "dhtNodes": [
+    "router.utorrent.com:6881",
+    "router.bittorrent.com:6881",
+    "dht.transmissionbt.com:6881",
+    "dht.aelitis.com:6881",
+    "router.silotis.us:6881",
+    "dht.libtorrent.org:25401",
+    "dht.anacrolix.link:42069",
+    "router.bittorrent.cloud:42069"
+  ],
+  "attestationKey": "T6WnQOfv6PraL58Zbs4hQRgrOK8DRdpsbwtgSy6lXok",
+  "catalogSnapshot": null,
+  "moderationKey": null,
+  "sig": "AoZJwUpMFHogqIPWh5eiqozza5csSoeZCVL_0uvapUNF-b7664P2CUWBIgilSl8QFRZTUcoDFcBl6CZKaLz2DQ"
+}
