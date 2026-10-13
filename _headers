@@ -1,3 +1,6 @@
 /bootstrap.json
   Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=300
+
+/fonts/*
+  Cache-Control: public, max-age=2592000

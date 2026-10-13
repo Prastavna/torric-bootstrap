@@ -1,28 +1,163 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Torric</title>
-  <style>
-    :root { color-scheme: light dark; --bg: #edeae4; --ink: #141414; --muted: #55524d; }
-    @media (prefers-color-scheme: dark) { :root { --bg: #141414; --ink: #edeae4; --muted: #a8a49c; } }
-    body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 system-ui, sans-serif; }
-    main { max-width: 640px; margin: 0 auto; padding: 32px 16px 64px; }
-    h1 { font-size: 32px; line-height: 1.1; margin: 0 0 8px; }
-    h2 { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin: 32px 0 8px; }
-    p { margin: 0 0 12px; color: var(--muted); }
-    a { color: var(--ink); }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Torric — music, passed around</title>
+<meta name="description" content="Torric is a music app and a social space in one. Post the song you can't stop playing, follow people whose taste you trust, start a group for your scene. The music travels between listeners' phones.">
+<meta name="theme-color" content="#EDEAE4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1E1C1C" media="(prefers-color-scheme: dark)">
+<link rel="preload" href="fonts/ArchivoExpanded-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
+<div class="frame">
+
+<header class="bar">
+  <a class="wordmark" href="./">Torric</a>
+  <nav class="nav" aria-label="Sections">
+    <a href="#social">Social</a>
+    <a href="#how">How it works</a>
+    <a href="#nearby">Nearby</a>
+    <a href="privacy">Privacy</a>
+  </nav>
+  <span class="btn" aria-disabled="true">Coming soon</span>
+</header>
+
 <main>
-  <h1>Torric</h1>
-  <p>Music shared between listeners’ phones, peer to peer. No email, no password, no ads.</p>
-  <h2>Help</h2>
-  <p>Questions, problems, privacy requests and takedown notices: Report in the app.</p>
-  <h2>Privacy</h2>
-  <p><a href="/privacy">The privacy policy</a>.</p>
+
+<section class="row hero-row">
+  <div>
+    <p class="meta">Music app · Social · Android &amp; iOS</p>
+    <h1 class="display" aria-label="Music, passed around">
+      <span class="line">Music,</span>
+      <span class="line"><span class="slash">passed</span></span>
+      <span class="line">around.</span>
+    </h1>
+    <p class="lede">Torric is a music app and a social space in one. Post the song you can’t stop playing, follow people whose taste you trust, start a group for your scene. And the music itself travels between listeners’ phones, not out of one company’s servers.</p>
+    <div class="btn-row">
+      <span class="btn btn-primary" aria-disabled="true">Coming soon to Android &amp; iOS</span>
+      <a class="btn" href="#how">How it works ↓</a>
+    </div>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <svg class="tunnel" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+      <g class="spokes"><line x1="200" y1="200" x2="0" y2="0"/><line x1="200" y1="200" x2="50" y2="0"/><line x1="200" y1="200" x2="100" y2="0"/><line x1="200" y1="200" x2="150" y2="0"/><line x1="200" y1="200" x2="200" y2="0"/><line x1="200" y1="200" x2="250" y2="0"/><line x1="200" y1="200" x2="300" y2="0"/><line x1="200" y1="200" x2="350" y2="0"/><line x1="200" y1="200" x2="400" y2="0"/><line x1="200" y1="200" x2="0" y2="400"/><line x1="200" y1="200" x2="50" y2="400"/><line x1="200" y1="200" x2="100" y2="400"/><line x1="200" y1="200" x2="150" y2="400"/><line x1="200" y1="200" x2="200" y2="400"/><line x1="200" y1="200" x2="250" y2="400"/><line x1="200" y1="200" x2="300" y2="400"/><line x1="200" y1="200" x2="350" y2="400"/><line x1="200" y1="200" x2="400" y2="400"/><line x1="200" y1="200" x2="0" y2="50"/><line x1="200" y1="200" x2="0" y2="100"/><line x1="200" y1="200" x2="0" y2="150"/><line x1="200" y1="200" x2="0" y2="200"/><line x1="200" y1="200" x2="0" y2="250"/><line x1="200" y1="200" x2="0" y2="300"/><line x1="200" y1="200" x2="0" y2="350"/><line x1="200" y1="200" x2="400" y2="50"/><line x1="200" y1="200" x2="400" y2="100"/><line x1="200" y1="200" x2="400" y2="150"/><line x1="200" y1="200" x2="400" y2="200"/><line x1="200" y1="200" x2="400" y2="250"/><line x1="200" y1="200" x2="400" y2="300"/><line x1="200" y1="200" x2="400" y2="350"/></g>
+      <g class="rings"><rect x="-50.00" y="-50.00" width="500.00" height="500.00"/><rect x="0.00" y="0.00" width="400.00" height="400.00"/><rect x="40.00" y="40.00" width="320.00" height="320.00"/><rect x="72.00" y="72.00" width="256.00" height="256.00"/><rect x="97.60" y="97.60" width="204.80" height="204.80"/><rect x="118.08" y="118.08" width="163.84" height="163.84"/><rect x="134.46" y="134.46" width="131.07" height="131.07"/><rect x="147.57" y="147.57" width="104.86" height="104.86"/><rect x="158.06" y="158.06" width="83.89" height="83.89"/><rect x="166.45" y="166.45" width="67.11" height="67.11"/><rect x="173.16" y="173.16" width="53.69" height="53.69"/><rect x="178.53" y="178.53" width="42.95" height="42.95"/><rect x="182.82" y="182.82" width="34.36" height="34.36"/><rect x="186.26" y="186.26" width="27.49" height="27.49"/><rect x="189.00" y="189.00" width="21.99" height="21.99"/><rect x="191.20" y="191.20" width="17.59" height="17.59"/><rect x="192.96" y="192.96" width="14.07" height="14.07"/></g>
+    </svg>
+    <div class="pile"><span class="pill" style="left:6%;top:92px;transform:rotate(-14deg)">lo-fi</span><span class="pill" style="left:30%;top:104px;transform:rotate(9deg)">jungle</span><span class="pill" style="left:58%;top:88px;transform:rotate(-6deg)">ghazal</span><span class="pill" style="left:14%;top:50px;transform:rotate(11deg)">shoegaze</span><span class="pill" style="left:47%;top:58px;transform:rotate(-19deg)">dub</span><span class="pill" style="left:26%;top:10px;transform:rotate(-4deg)">field recordings</span><span class="pill" style="left:60%;top:24px;transform:rotate(15deg)">bedroom pop</span><span class="pill" style="left:76%;top:70px;transform:rotate(-10deg)">ambient</span></div>
+  </div>
+</section>
+
+<section class="row cols-3 strip" aria-label="In short">
+  <div><span class="meta">Account</span><span class="big">A key, not an email</span></div>
+  <div><span class="meta">Business model</span><span class="big">No ads. No tracking.</span></div>
+  <div><span class="meta">Delivery</span><span class="big">Phone to phone</span></div>
+</section>
+
+<section id="social" aria-labelledby="social-title">
+  <div class="row cols-2">
+    <div>
+      <p class="meta">01 / Social</p>
+      <h2 class="display" id="social-title">Talk about the song while it’s playing</h2>
+      <p class="lede">Every post can carry a song. Tap the card and it plays right there, and your queue carries on from it. Reply, repost, like, edit a typo. Feeds run in order: nothing decides what you see except the people you follow.</p>
+    </div>
+    <div class="feed" role="img" aria-label="An example feed: posts with playable song cards and a reply">
+      <article class="post">
+        <div class="post-head"><svg class="identicon" viewBox="-1 -1 7 7" aria-hidden="true"><g fill="currentColor"><rect x="1" y="0" width="1" height="1"/><rect x="3" y="0" width="1" height="1"/><rect x="2" y="0" width="1" height="1"/><rect x="0" y="1" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="2" y="1" width="1" height="1"/><rect x="1" y="2" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="4" y="3" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/></g></svg><span class="handle">@nightbus</span><span class="meta">2m</span></div>
+        <p class="post-body">this has been on repeat since the rain started. wait for the drop at 1:40</p>
+        <div class="song playing"><svg class="cover" viewBox="0 0 56 56" aria-hidden="true"><g stroke="currentColor" stroke-opacity="0.5" fill="none"><line x1="0" y1="0" x2="18.2" y2="56"/><line x1="8" y1="0" x2="21.0" y2="56"/><line x1="16" y1="0" x2="23.8" y2="56"/><line x1="24" y1="0" x2="26.6" y2="56"/><line x1="32" y1="0" x2="29.4" y2="56"/><line x1="40" y1="0" x2="32.2" y2="56"/><line x1="48" y1="0" x2="35.0" y2="56"/><line x1="56" y1="0" x2="37.8" y2="56"/><line x1="0" y1="18" x2="56" y2="18"/><line x1="0" y1="32" x2="56" y2="32"/><line x1="0" y1="44" x2="56" y2="44"/><line x1="0" y1="51" x2="56" y2="51"/></g></svg><div><span class="song-title">Low Tide Radio</span><span class="meta">Mareva · 4:12</span></div><span class="play">❚❚</span></div>
+        <div class="post-actions"><span>♥ 24</span><span>⟲ 6</span><span>↩ 3</span></div>
+      </article>
+      <article class="post reply">
+        <div class="post-head"><svg class="identicon" viewBox="-1 -1 7 7" aria-hidden="true"><g fill="currentColor"><rect x="0" y="0" width="1" height="1"/><rect x="4" y="0" width="1" height="1"/><rect x="1" y="1" width="1" height="1"/><rect x="3" y="1" width="1" height="1"/><rect x="2" y="1" width="1" height="1"/><rect x="0" y="2" width="1" height="1"/><rect x="4" y="2" width="1" height="1"/><rect x="1" y="2" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/></g></svg><span class="handle">@ana.k</span><span class="meta">1m</span></div>
+        <p class="post-body">that bassline. adding it to the sunday playlist</p>
+      </article>
+      <article class="post">
+        <div class="post-head"><svg class="identicon" viewBox="-1 -1 7 7" aria-hidden="true"><g fill="currentColor"><rect x="1" y="0" width="1" height="1"/><rect x="3" y="0" width="1" height="1"/><rect x="0" y="1" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="1" y="1" width="1" height="1"/><rect x="3" y="1" width="1" height="1"/><rect x="2" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="4" y="3" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/></g></svg><span class="handle">@field.notes</span><span class="meta">18m</span></div>
+        <p class="post-body">Recorded the tram depot at 5am. The whole set goes up tonight.</p>
+        <div class="song"><svg class="cover" viewBox="0 0 56 56" aria-hidden="true"><g stroke="currentColor" stroke-opacity="0.5" fill="none"><line x1="0" y1="0" x2="18.2" y2="56"/><line x1="8" y1="0" x2="21.0" y2="56"/><line x1="16" y1="0" x2="23.8" y2="56"/><line x1="24" y1="0" x2="26.6" y2="56"/><line x1="32" y1="0" x2="29.4" y2="56"/><line x1="40" y1="0" x2="32.2" y2="56"/><line x1="48" y1="0" x2="35.0" y2="56"/><line x1="56" y1="0" x2="37.8" y2="56"/><line x1="0" y1="22" x2="56" y2="22"/><line x1="0" y1="35" x2="56" y2="35"/><line x1="0" y1="44" x2="56" y2="44"/><line x1="0" y1="51" x2="56" y2="51"/></g></svg><div><span class="song-title">Depot, 5am</span><span class="meta">field.notes · 9:48</span></div><span class="play">▶</span></div>
+        <div class="post-actions"><span>♥ 41</span><span>⟲ 12</span><span>↩ 7</span></div>
+      </article>
+    </div>
+  </div>
+  <div class="row cols-4">
+    <div class="cell"><h3 class="display">Feeds</h3><p>Following shows you, the people you follow and what they repost. Everyone shows the whole room, newest first.</p></div>
+    <div class="cell"><h3 class="display">Profiles</h3><p>An @handle, a short bio and a pattern drawn from your key. No profile photos, so there are no faces to scrape.</p></div>
+    <div class="cell"><h3 class="display">Groups</h3><p>Start one for your scene, your city or your band. Owners choose mods, and mods keep it on topic.</p></div>
+    <div class="cell"><h3 class="display">Inbox</h3><p>Replies, mentions, follows, likes and reposts in one place, so you never miss who heard what you shared.</p></div>
+  </div>
+  <div class="row cols-3">
+    <div class="cell"><h3 class="display">Playlists that travel</h3><p>Make one on your phone and it follows you to your other devices. Make it public and anyone can play it.</p></div>
+    <div class="cell"><h3 class="display">Radio from a song</h3><p>Start from one track and keep going. Artist and album pages, a queue you can rearrange, controls on the lock screen.</p></div>
+    <div class="cell"><h3 class="display">Block and mute</h3><p>Block ends follows both ways and keeps the two of you apart. Mute just quietens someone. Both are a tap away.</p></div>
+  </div>
+</section>
+
+<section id="how" aria-labelledby="how-title">
+  <div class="row">
+    <div>
+      <p class="meta">02 / How it works</p>
+      <h2 class="display" id="how-title">No middleman for the music</h2>
+    </div>
+  </div>
+  <div class="row cols-4">
+    <div class="cell"><span class="num">01</span><h3 class="display">Your key is your account</h3><p>The app makes a key on your phone. Pick an @handle and write down your recovery phrase. That’s the whole sign-up: no email, no password.</p></div>
+    <div class="cell"><span class="num">02</span><h3 class="display">Listeners carry the music</h3><p>Tracks travel between phones over BitTorrent. You choose how much storage to share, and that space keeps music available for the next listener.</p></div>
+    <div class="cell"><span class="num">03</span><h3 class="display">Everyone holds the catalog</h3><p>The catalog is a signed file every phone keeps a copy of, so search keeps working even when our servers don’t.</p></div>
+    <div class="cell"><span class="num">04</span><h3 class="display">Servers help, they don’t own</h3><p>Posts, playlists and profiles are records signed by your key. Our servers store and pass them on, but they can’t forge them.</p></div>
+  </div>
+</section>
+
+<section id="nearby" aria-labelledby="nearby-title">
+  <div class="row cols-2">
+    <div>
+      <p class="meta">03 / Nearby <span class="tag">Early · Android first</span></p>
+      <h2 class="display" id="nearby-title">No signal? Still social.</h2>
+      <p class="lede">On a train, at a festival, in a basement venue. Nearby uses Bluetooth to reach the phones around you, with or without internet.</p>
+    </div>
+    <div>
+      <ul class="ticks">
+        <li><b>A room for whoever’s close.</b> Anonymous by default: you’re “anon-3f2a” until you choose to say who you are.</li>
+        <li><b>Private talks.</b> End-to-end encrypted, and your @handle is shown only to people you choose.</li>
+        <li><b>Group chats of up to 32.</b> For your crew at the show.</li>
+        <li><b>Tracks, hand to hand.</b> If you opt in, your phone carries catalog tracks for others and passes them on over a fast Wi-Fi link.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="yours" aria-labelledby="yours-title">
+  <div class="row">
+    <div>
+      <p class="meta">04 / Yours</p>
+      <h2 class="display" id="yours-title">Built so there’s nothing to sell</h2>
+    </div>
+  </div>
+  <div class="row cols-3">
+    <div class="cell"><h3 class="display">No ads, no tracking</h3><p>No analytics, no advertising IDs, no data brokers. We don’t collect what we’d have no use for.</p></div>
+    <div class="cell"><h3 class="display">Moderated in the open</h3><p>Report and block are a tap away. Takedowns are signed by our moderators, and every copy of the app honours them.</p></div>
+    <div class="cell"><h3 class="display">Leave whenever</h3><p>Delete your identity from inside the app, and what you made goes with it. <a href="privacy">Read the privacy policy →</a></p></div>
+  </div>
+</section>
+
+<section class="row" aria-labelledby="soon-title">
+  <div>
+    <p class="meta">05 / Coming soon</p>
+    <h2 class="display" id="soon-title">On Android and iOS, soon</h2>
+    <p class="lede">We’re testing Torric on real phones now. This page will say when you can install it.</p>
+  </div>
+</section>
+
 </main>
+
+<footer class="footer">
+  <a class="wordmark" href="./">Torric</a>
+  <nav class="nav" aria-label="Footer" style="display:flex">
+    <a href="privacy">Privacy</a>
+  </nav>
+</footer>
+
+</div>
 </body>
 </html>
