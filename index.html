@@ -115,6 +115,13 @@
       <figcaption><span class="meta">Listen</span><h3 class="display">Radio from one song</h3><p>Start radio from a track and the queue fills. Drag to reorder.</p></figcaption>
     </figure>
   </div>
+  <dialog id="show-big" class="show-big" aria-label="Clip">
+    <button type="button" class="show-close meta" aria-label="Close">Close ✕</button>
+    <figure>
+      <video muted loop playsinline width="360" height="780"></video>
+      <figcaption></figcaption>
+    </figure>
+  </dialog>
   <script>
     // Play a clip only while it's on screen; leave the posters still for
     // anyone who asked for less motion.
@@ -128,6 +135,47 @@
         });
       }, { threshold: 0.35 });
       clips.forEach(function (v) { seen.observe(v); });
+    })();
+
+    // Click a clip to see it big; Esc, the close button or the backdrop
+    // puts it away.
+    (function () {
+      var clips = document.querySelectorAll('.show video');
+      var box = document.getElementById('show-big');
+      if (!box || typeof box.showModal !== 'function') return;
+      var big = box.querySelector('video');
+      var caption = box.querySelector('figcaption');
+      var still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var opener = null;
+      function open(v) {
+        opener = v;
+        big.innerHTML = v.innerHTML;
+        big.poster = v.poster;
+        big.setAttribute('aria-label', v.getAttribute('aria-label'));
+        big.controls = still;
+        caption.innerHTML = v.parentNode.querySelector('figcaption').innerHTML;
+        big.load();
+        box.showModal();
+        if (!still) big.play().catch(function () {});
+      }
+      clips.forEach(function (v) {
+        v.tabIndex = 0;
+        v.setAttribute('role', 'button');
+        v.setAttribute('aria-haspopup', 'dialog');
+        v.addEventListener('click', function () { open(v); });
+        v.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(v); }
+        });
+      });
+      box.addEventListener('click', function (e) {
+        if (e.target === box || e.target.closest('.show-close')) box.close();
+      });
+      box.addEventListener('close', function () {
+        big.pause();
+        big.removeAttribute('src');
+        big.innerHTML = '';
+        if (opener) opener.focus();
+      });
     })();
   </script>
 </section>
