@@ -1,0 +1,5 @@
+Contact: mailto:contact@torric.app
+Expires: 2027-10-14T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://torric.app/.well-known/security.txt
+Policy: https://torric.app/rules

@@ -5,27 +5,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Torric — music, passed around</title>
 <meta name="description" content="Torric is a music app and a social space in one. Post the song you can't stop playing, follow people whose taste you trust, start a group for your scene. The music travels between listeners' phones.">
+<link rel="canonical" href="https://torric.app/">
 <meta name="theme-color" content="#EDEAE4" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1E1C1C" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Torric">
+<meta property="og:title" content="Torric — music, passed around">
+<meta property="og:description" content="Torric is a music app and a social space in one. Post the song you can't stop playing, follow people whose taste you trust, start a group for your scene. The music travels between listeners' phones.">
+<meta property="og:url" content="https://torric.app/">
+<meta property="og:image" content="https://torric.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Torric: music, passed around">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="fonts/ArchivoExpanded-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="site.css">
 </head>
 <body>
 <div class="frame">
 
+<a class="skip" href="#main">Skip to content</a>
 <header class="bar">
-  <a class="wordmark" href="./">Torric</a>
+  <a class="wordmark" href="./"><img class="mark" src="favicon.svg" alt="" width="26" height="26">Torric</a>
   <nav class="nav" aria-label="Sections">
-    <a href="#social">Social</a>
-    <a href="#how">How it works</a>
-    <a href="#nearby">Nearby</a>
-    <a href="privacy">Privacy</a>
+    <a href="./#tour">Tour</a>
+    <a href="./#social">Social</a>
+    <a href="./#how">How it works</a>
+    <a href="./#nearby">Nearby</a>
+    <a href="support">Support</a>
   </nav>
   <span class="btn" aria-disabled="true">Coming soon</span>
 </header>
 
-<main>
-
+<main id="main">
 <section class="row hero-row">
   <div>
     <p class="meta">Music app · Social · Android &amp; iOS</p>
@@ -53,6 +69,67 @@
   <div><span class="meta">Account</span><span class="big">A key, not an email</span></div>
   <div><span class="meta">Business model</span><span class="big">No ads. No tracking.</span></div>
   <div><span class="meta">Delivery</span><span class="big">Phone to phone</span></div>
+</section>
+
+<section id="tour" aria-labelledby="tour-title">
+  <div class="row">
+    <div>
+      <p class="meta">Tour</p>
+      <h2 class="display" id="tour-title">See it in your hand</h2>
+    </div>
+  </div>
+  <div class="row shows">
+    <figure class="show">
+      <video muted loop playsinline preload="none" poster="media/feed.jpg" width="360" height="780" aria-label="Talk about the song while it’s playing: Tap a song card in your feed and it plays right there, fetched from three phones that hold it.">
+        <source src="media/feed.webm" type="video/webm">
+        <source src="media/feed.mp4" type="video/mp4">
+      </video>
+      <figcaption><span class="meta">Social</span><h3 class="display">Talk about the song while it’s playing</h3><p>Tap a song card in your feed and it plays right there, fetched from three phones that hold it.</p></figcaption>
+    </figure>
+    <figure class="show">
+      <video muted loop playsinline preload="none" poster="media/compose.jpg" width="360" height="780" aria-label="Share what you’re hearing: From any track’s menu: Share in a post, write a line, and it’s at the top of Social.">
+        <source src="media/compose.webm" type="video/webm">
+        <source src="media/compose.mp4" type="video/mp4">
+      </video>
+      <figcaption><span class="meta">Post</span><h3 class="display">Share what you’re hearing</h3><p>From any track’s menu: Share in a post, write a line, and it’s at the top of Social.</p></figcaption>
+    </figure>
+    <figure class="show">
+      <video muted loop playsinline preload="none" poster="media/groups.jpg" width="360" height="780" aria-label="A room for your scene: A group’s posts, shared playlists anyone in it can add to, and its members and mods.">
+        <source src="media/groups.webm" type="video/webm">
+        <source src="media/groups.mp4" type="video/mp4">
+      </video>
+      <figcaption><span class="meta">Groups</span><h3 class="display">A room for your scene</h3><p>A group’s posts, shared playlists anyone in it can add to, and its members and mods.</p></figcaption>
+    </figure>
+    <figure class="show">
+      <video muted loop playsinline preload="none" poster="media/nearby.jpg" width="360" height="780" aria-label="No signal? Still social.: No service: phones around appear over Bluetooth, and a track comes over Wi-Fi from the phone that has it.">
+        <source src="media/nearby.webm" type="video/webm">
+        <source src="media/nearby.mp4" type="video/mp4">
+      </video>
+      <figcaption><span class="meta">Nearby</span><h3 class="display">No signal? Still social.</h3><p>No service: phones around appear over Bluetooth, and a track comes over Wi-Fi from the phone that has it.</p></figcaption>
+    </figure>
+    <figure class="show">
+      <video muted loop playsinline preload="none" poster="media/radio.jpg" width="360" height="780" aria-label="Radio from one song: Start radio from a track and the queue fills. Drag to reorder.">
+        <source src="media/radio.webm" type="video/webm">
+        <source src="media/radio.mp4" type="video/mp4">
+      </video>
+      <figcaption><span class="meta">Listen</span><h3 class="display">Radio from one song</h3><p>Start radio from a track and the queue fills. Drag to reorder.</p></figcaption>
+    </figure>
+  </div>
+  <script>
+    // Play a clip only while it's on screen; leave the posters still for
+    // anyone who asked for less motion.
+    (function () {
+      var clips = document.querySelectorAll('.show video');
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+      var seen = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) e.target.play().catch(function () {});
+          else e.target.pause();
+        });
+      }, { threshold: 0.35 });
+      clips.forEach(function (v) { seen.observe(v); });
+    })();
+  </script>
 </section>
 
 <section id="social" aria-labelledby="social-title">
@@ -148,14 +225,34 @@
     <p class="lede">We’re testing Torric on real phones now. This page will say when you can install it.</p>
   </div>
 </section>
-
 </main>
 
-<footer class="footer">
-  <a class="wordmark" href="./">Torric</a>
-  <nav class="nav" aria-label="Footer" style="display:flex">
-    <a href="privacy">Privacy</a>
+<footer class="footer row cols-4">
+  <div>
+    <a class="wordmark" href="./"><img class="mark" src="favicon.svg" alt="" width="26" height="26">Torric</a>
+    <p>Music, passed around. A music app and a social space in one, made by Prastavna.</p>
+  </div>
+  <nav aria-label="The app">
+    <p class="meta">The app</p>
+    <a href="./#tour">Tour</a>
+    <a href="./#social">Social</a>
+    <a href="./#how">How it works</a>
+    <a href="./#nearby">Nearby</a>
+    <a href="support">Support</a>
   </nav>
+  <nav aria-label="Policies">
+    <p class="meta">Policies</p>
+    <a href="privacy">Privacy</a>
+    <a href="terms">Terms</a>
+    <a href="rules">Rules &amp; takedowns</a>
+    <a href="child-safety">Child safety</a>
+    <a href="delete-account">Delete your identity</a>
+  </nav>
+  <div>
+    <p class="meta">Contact</p>
+    <p><a href="mailto:contact@torric.app">contact@torric.app</a></p>
+    <p>Or Report, in any menu in the app.</p>
+  </div>
 </footer>
 
 </div>

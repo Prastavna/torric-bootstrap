@@ -1,0 +1,14 @@
+{
+  "name": "Torric",
+  "short_name": "Torric",
+  "description": "A music app and a social space in one. The music travels between listeners' phones.",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#EDEAE4",
+  "theme_color": "#EDEAE4",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

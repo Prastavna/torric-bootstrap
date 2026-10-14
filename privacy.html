@@ -3,56 +3,127 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Torric privacy policy</title>
+<title>Privacy policy · Torric</title>
+<meta name="description" content="What Torric keeps on your phone, what our servers keep, what’s public, and how to delete it all.">
+<link rel="canonical" href="https://torric.app/privacy">
 <meta name="theme-color" content="#EDEAE4" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1E1C1C" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Torric">
+<meta property="og:title" content="Privacy policy · Torric">
+<meta property="og:description" content="What Torric keeps on your phone, what our servers keep, what’s public, and how to delete it all.">
+<meta property="og:url" content="https://torric.app/privacy">
+<meta property="og:image" content="https://torric.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Torric: music, passed around">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/ArchivoExpanded-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="site.css">
 </head>
 <body>
 <div class="frame">
+
+<a class="skip" href="#main">Skip to content</a>
 <header class="bar">
-  <a class="wordmark" href="./">Torric</a>
+  <a class="wordmark" href="./"><img class="mark" src="favicon.svg" alt="" width="26" height="26">Torric</a>
+  <nav class="nav" aria-label="Sections">
+    <a href="./#tour">Tour</a>
+    <a href="./#social">Social</a>
+    <a href="./#how">How it works</a>
+    <a href="./#nearby">Nearby</a>
+    <a href="support">Support</a>
+  </nav>
   <span class="btn" aria-disabled="true">Coming soon</span>
 </header>
-<main class="row">
-<div class="prose">
+
+<main id="main" class="row doc">
+<aside>
   <p class="meta">Privacy</p>
-  <h1 class="display" style="font-size:clamp(34px,6vw,64px)">Privacy policy</h1>
-  <h2>In short</h2>
+  <p class="meta updated">Updated 2026-10-14</p>
+  <nav class="toc" aria-label="On this page">
+    <p class="meta">On this page</p>
+    <a href="#in-short">In short</a>
+    <a href="#what-stays-on-your-phone">What stays on your phone</a>
+    <a href="#what-our-servers-keep">What our servers keep</a>
+    <a href="#what-s-public">What’s public</a>
+    <a href="#private-messages-and-group-chats">Private messages and group chats</a>
+    <a href="#nearby">Nearby</a>
+    <a href="#peer-to-peer">Peer to peer</a>
+    <a href="#who-runs-it">Who runs it</a>
+    <a href="#deleting-your-identity">Deleting your identity</a>
+    <a href="#children">Children</a>
+    <a href="#contact-and-changes">Contact and changes</a>
+  </nav>
+</aside>
+<div class="prose">
+  <h1 class="display">Privacy policy</h1>
+  <h2 id="in-short">In short</h2>
   <p>Torric has no email, phone number or password, and no ads, analytics or advertising tracking. Your identity is a key made on your phone. Music moves between listeners’ phones, peer to peer, so other listeners see your IP address while you share or fetch a track.</p>
-  <h2>What stays on your phone</h2>
+  <h2 id="what-stays-on-your-phone">What stays on your phone</h2>
   <p>Your device key, in the phone’s secure keystore. Your library, the music cached for playing and sharing, your settings, and a copy of the records you’ve signed. Your private messages, group chats and Nearby talks, and the keys that open them. The recovery phrase is shown to you once and never stored or sent.</p>
-  <h2>What our servers keep</h2>
+  <h2 id="what-our-servers-keep">What our servers keep</h2>
   <p>If you make an identity: its public key, your handle and bio, each device’s public key and name (the phone’s make and model) with when it was added and last seen, and the totals of music each device shared and fetched, which set your sharing ratio.</p>
   <p>What you do in the app: tracks you upload (their details and link, not the audio), posts and replies, likes, reposts, follows, blocks and mutes, mentions, groups you’re in, playlists (private ones too, so your devices stay in step), and reports you send. Many of these are kept as records signed by your key.</p>
   <p>Listening without an identity sends nothing about you beyond the requests themselves.</p>
-  <h2>What’s public</h2>
+  <h2 id="what-s-public">What’s public</h2>
   <p>Your handle, bio, posts, follows, likes and reposts, public playlists and uploads, under your handle, and how much music you’ve shared and fetched (your sharing ratio). Each of your devices also publishes the public keys others need to send it private messages. Public signed records can be copied by anyone running a Torric mirror, and checked by anyone, since they’re signed. Blocks, mutes and private playlists aren’t shown to others.</p>
-  <h2>Private messages and group chats</h2>
+  <h2 id="private-messages-and-group-chats">Private messages and group chats</h2>
   <p>They’re end-to-end encrypted: only the people in a conversation can read it. Each message waits on our servers, encrypted, for up to 72 hours until the recipient’s phone fetches it. It’s filed under a tag that changes daily and that only the people in the conversation can work out, and it’s posted without saying who sent it, so we can’t read it or tell who it’s from or for. To stop the mailbox being flooded, we count how many messages each IP address posts per hour, keep that count under a one-way hash of the address, and delete it within three hours.</p>
   <p>Who’s in a group is sent only to its members, inside encrypted messages. With Nearby on, the same encrypted messages are also handed to phones around you, which pass them on without being able to open them.</p>
-  <h2>Nearby</h2>
+  <h2 id="nearby">Nearby</h2>
   <p>Nearby is off until you turn it on. It uses Bluetooth, and Wi-Fi Direct to move tracks, to reach phones around you with no internet. Phones in range see a nickname you choose and an ID that changes every 15 minutes, never your handle. Anything in the nearby public channel can be read by anyone in range, and is passed on by the phones around for up to six hours. Nothing in Nearby goes to our servers.</p>
   <p>In a private talk your handle is shown only when you choose “Show who I am”, or automatically to people you chose to remember. If you turn on carrying tracks for others, your phone fetches and stores tracks from the catalog that people nearby ask for, within a quarter of your storage, and shares them.</p>
-  <h2>Peer to peer</h2>
+  <h2 id="peer-to-peer">Peer to peer</h2>
   <p>When your phone shares or fetches a track, the phones it connects to, the trackers that introduce them (ours and public ones) and the BitTorrent DHT see your IP address and which tracks you’re sharing or fetching. That’s how peer-to-peer works, and it’s outside what we can hide. Our tracker holds this only in memory, to connect peers, and doesn’t store it.</p>
-  <h2>Who runs it</h2>
+  <h2 id="who-runs-it">Who runs it</h2>
+  <p>Torric is made by Prastavna, in India, which is responsible for the data described here.</p>
   <p>Our servers run on Cloudflare, which keeps short-lived request logs (including IP addresses) for a few days, so we can find faults.</p>
   <p>Other services the app contacts, each of which sees your IP address: Expo’s update service, checked when the app starts, which also receives a random ID for this install; GitHub Pages and jsDelivr, which host the signed file telling the app where our servers are; public BitTorrent trackers and the DHT; and mirrors of the catalog, which other people may run.</p>
   <p>We don’t sell your data, share it with anyone beyond the above, or use it for advertising.</p>
-  <h2>Deleting your identity</h2>
+  <h2 id="deleting-your-identity">Deleting your identity</h2>
   <p>Account → Delete identity erases it for good, from every device: your handle, profile, device names, posts, likes, follows, playlists, sharing totals and signed records. Your uploads leave the catalog and search, and their details are erased; only each one’s info hash is kept, so our tracker keeps refusing it. Tracks you added to a group’s playlists stay with the group. Mirrors are told to drop your records. The handle stays reserved for 30 days so nobody can pose as you, and your recovery phrase stops working: the identity’s public key and its devices’ public keys and dates are kept, marked deleted, only so they can’t be used again. Reports you sent and moderators’ decisions are kept. Music other people already saved on their phones is theirs, and stays there.</p>
   <p>Without an identity, uninstalling the app removes everything it kept.</p>
-  <h2>Children</h2>
+  <h2 id="children">Children</h2>
   <p>Torric isn’t meant for children under 13.</p>
-  <h2>Contact and changes</h2>
-  <p>The address for privacy questions is being set up. Until then, Report in the app reaches the same people.</p>
-  <p>When this policy changes, the date below changes with it. Last updated 2026-10-13.</p>
+  <h2 id="contact-and-changes">Contact and changes</h2>
+  <p>Questions about this policy, or about data we hold on you: contact@torric.app.</p>
+  <p>When this policy changes, the date below changes with it. Last updated 2026-10-14.</p>
 </div>
 </main>
-<footer class="footer">
-  <a class="wordmark" href="./">Torric</a>
+
+<footer class="footer row cols-4">
+  <div>
+    <a class="wordmark" href="./"><img class="mark" src="favicon.svg" alt="" width="26" height="26">Torric</a>
+    <p>Music, passed around. A music app and a social space in one, made by Prastavna.</p>
+  </div>
+  <nav aria-label="The app">
+    <p class="meta">The app</p>
+    <a href="./#tour">Tour</a>
+    <a href="./#social">Social</a>
+    <a href="./#how">How it works</a>
+    <a href="./#nearby">Nearby</a>
+    <a href="support">Support</a>
+  </nav>
+  <nav aria-label="Policies">
+    <p class="meta">Policies</p>
+    <a href="privacy">Privacy</a>
+    <a href="terms">Terms</a>
+    <a href="rules">Rules &amp; takedowns</a>
+    <a href="child-safety">Child safety</a>
+    <a href="delete-account">Delete your identity</a>
+  </nav>
+  <div>
+    <p class="meta">Contact</p>
+    <p><a href="mailto:contact@torric.app">contact@torric.app</a></p>
+    <p>Or Report, in any menu in the app.</p>
+  </div>
 </footer>
+
 </div>
 </body>
 </html>
