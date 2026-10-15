@@ -9,7 +9,7 @@ The same file is served from several places, and the app tries all of them:
 
 - https://prastavna.github.io/torric-bootstrap/bootstrap.json (GitHub Pages)
 - https://cdn.jsdelivr.net/gh/Prastavna/torric-bootstrap@main/bootstrap.json (jsDelivr)
-- https://torric-bootstrap.ssahillppatell.workers.dev/bootstrap.json (Cloudflare)
+- https://torric.app/bootstrap.json (Cloudflare)
 
 ## Trust
 

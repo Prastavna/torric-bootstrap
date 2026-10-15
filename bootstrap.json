@@ -1,12 +1,12 @@
 {
   "v": 1,
-  "seq": 1,
-  "issuedAt": 1791696209251,
+  "seq": 2,
+  "issuedAt": 1792041960476,
   "api": [
-    "https://torric-api.ssahillppatell.workers.dev"
+    "https://api.torric.app"
   ],
   "trackers": [
-    "wss://torric-tracker.ssahillppatell.workers.dev"
+    "wss://tracker.torric.app"
   ],
   "publicTrackers": [
     "wss://tracker.openwebtorrent.com",
@@ -25,5 +25,5 @@
   "attestationKey": "T6WnQOfv6PraL58Zbs4hQRgrOK8DRdpsbwtgSy6lXok",
   "catalogSnapshot": null,
   "moderationKey": null,
-  "sig": "AoZJwUpMFHogqIPWh5eiqozza5csSoeZCVL_0uvapUNF-b7664P2CUWBIgilSl8QFRZTUcoDFcBl6CZKaLz2DQ"
+  "sig": "d_Ylhm1-qRB2QTs2934v3wxvN0mqipGImpR-qCi-ln_5Y5pwZ90Y_11V2rA7mE9gHdtL755Ehoho-gXAwjp9Bg"
 }
